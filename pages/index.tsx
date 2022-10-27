@@ -11,7 +11,6 @@ export const getStaticProps = async () => {
   const supabase = createClient(supabaseUrl, supabaseKey);
 
   const { data } = await supabase.from("images").select("*").order("id");
-  console.log("Data: ", data);
 
   return {
     props: {
