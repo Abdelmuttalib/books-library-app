@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input-label {
+  @apply mb-0.5 block;
+}
+
+.input {
+  @apply px-2 py-2 text-base rounded outline-none bg-gray-100;
+}
+.input-error {
+  @apply ring-2 ring-red-600;
+}
+
+.input:focus {
+  @apply ring-2 ring-offset-2 ring-gray-200;
+}
+
+.input-error-message {
+  @apply mt-0.5 text-sm text-red-600;
+}
+
+.button {
+  @apply bg-primary text-white outline-none text-lg border-none py-1.5 px-2 rounded font-medium cursor-pointer;
+}
