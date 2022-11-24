@@ -188,21 +188,24 @@ type BookT = {
 
 const Header = () => {
   const supabaseClient = useSupabaseClient();
+  const user = useUser();
   return (
     <header className="sticky top-0 flex flex-1 h-14 items-center justify-between max-w-7xl px-8 mx-auto bg-white/30 backdrop-blur-md z-[999]">
       <Link href="/">
         <h2 className="text-lg font-semibold">Books Library</h2>
       </Link>
 
-      <div>
-        <button
-          type="button"
-          className="bg-primary text-white outline-none border-none py-1 px-2 rounded font-medium cursor-pointer"
-          onClick={async () => await supabaseClient.auth.signOut()}
-        >
-          Sign Out
-        </button>
-      </div>
+      {!user && (
+        <div>
+          <button
+            type="button"
+            className="bg-primary text-white outline-none border-none py-1 px-2 rounded font-medium cursor-pointer"
+            onClick={async () => await supabaseClient.auth.signOut()}
+          >
+            Sign Out
+          </button>
+        </div>
+      )}
     </header>
   );
 };
