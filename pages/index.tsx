@@ -195,7 +195,7 @@ const Header = () => {
         <h2 className="text-lg font-semibold">Books Library</h2>
       </Link>
 
-      {!user && (
+      {user && (
         <div>
           <button
             type="button"
