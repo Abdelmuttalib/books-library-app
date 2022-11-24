@@ -291,7 +291,7 @@ const Book = ({
   is_available,
 }: BookT) => {
   return (
-    <div className="bg-gray-50 h-fit">
+    <div className="h-fit">
       <div>
         <BlurImage bookImageSrc={image_url_l} />
       </div>
