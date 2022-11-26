@@ -269,7 +269,7 @@ export default function Gallery() {
   return (
     <>
       <Head>
-        <title>Image Gallery</title>
+        <title>Books Library</title>
       </Head>
 
       <Header />
