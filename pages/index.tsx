@@ -313,7 +313,7 @@ export default function Gallery() {
                     }}
                   >
                     <option key={1} value="">
-                      select...
+                      --select--
                     </option>
                     {genres.map((genre, indx) => (
                       <option key={genre} value={indx + 1}>
@@ -344,7 +344,7 @@ export default function Gallery() {
                     }}
                   >
                     <option key={1} value="">
-                      select...
+                      --select--
                     </option>
                     {publications.map((p, indx) => (
                       <option key={p} value={p}>
@@ -375,7 +375,7 @@ export default function Gallery() {
                     }}
                   >
                     <option key={1} value="">
-                      select...
+                      -- select --
                     </option>
                     <option key={2} value="true">
                       Available
@@ -433,7 +433,9 @@ export default function Gallery() {
                       type="button"
                       className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 text-gray-800"
                     >
-                      {filterThree.value ? "Available" : "Not Available"}
+                      {filterThree.value === "true"
+                        ? "Available"
+                        : "Not Available"}
                       <XCircleIcon
                         onClick={() =>
                           setFilterThree({
