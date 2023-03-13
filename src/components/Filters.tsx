@@ -40,8 +40,8 @@ const Filters: FC<FiltersProps> = ({ filters, setFilters }) => {
             <option key={1} value="">
               --select--
             </option>
-            {genres.map(({ genre }, indx) => (
-              <option key={genre} value={indx + 2}>
+            {genres.map(({ genre, id }, indx) => (
+              <option key={genre} value={id}>
                 {genre}
               </option>
             ))}
